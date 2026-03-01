@@ -19,8 +19,9 @@
   <img src="./client/public/landing.png" alt="SplitSquad Landing" width="100%" style="border: 4px solid black; border-radius: 8px; margin-bottom: 20px;"/>
 </p>
 <p align="center">
-  <img src="./client/public/dashboard.png" alt="SplitSquad Dashboard" width="48%" style="border: 4px solid black; border-radius: 8px;"/>
-  <img src="./client/public/group_detail.png" alt="SplitSquad Group Detail" width="48%" style="border: 4px solid black; border-radius: 8px;"/>
+  <img src="./client/public/dashboard_new.png" alt="SplitSquad Dashboard" width="32%" style="border: 4px solid black; border-radius: 8px;"/>
+  <img src="./client/public/activity.png" alt="SplitSquad Activity" width="32%" style="border: 4px solid black; border-radius: 8px;"/>
+  <img src="./client/public/balances.png" alt="SplitSquad Balances" width="32%" style="border: 4px solid black; border-radius: 8px;"/>
 </p>
 
 ---
