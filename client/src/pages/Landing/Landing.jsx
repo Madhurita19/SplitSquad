@@ -234,7 +234,7 @@ const Landing = () => {
                     <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-4">
                         <div className="flex flex-col gap-2">
                             <h5 className="font-display font-black uppercase italic text-3xl">SplitSquad</h5>
-                            <p className="font-mono text-xs font-bold uppercase opacity-60">© 2024 SplitSquad Inc. The End of Tabs.</p>
+                            <p className="font-mono text-xs font-bold uppercase opacity-60">© Created by Madhurita Mukherjee</p>
                         </div>
                         <div className="flex gap-4">
                             <Link to="/login" className="font-mono text-sm font-bold uppercase hover:text-hot-pink transition-colors">Login</Link>
