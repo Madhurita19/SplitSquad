@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#25f478", // Toxic Green
+                        "hot-pink": "#ff007f",
+                        "electric-blue": "#2e5bff",
+                        "neon-yellow": "#f4ff25",
+                        "background-light": "#fdfdfd",
+                        "background-dark": "#102217",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    boxShadow: {
+                        'neo': '4px 4px 0px 0px #000000',
+                        'neo-lg': '8px 8px 0px 0px #000000',
+                    },
+                    borderWidth: {
+                        '3': '3px',
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background-color: #f5f8f7;
+        }
+        .neo-border {
+            border: 3px solid #000000;
+        }
+        .neo-shadow {
+            box-shadow: 4px 4px 0px 0px #000000;
+        }
+        .neo-shadow-lg {
+            box-shadow: 8px 8px 0px 0px #000000;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased overflow-x-hidden">
+<!-- Top Navigation -->
+<nav class="sticky top-0 z-50 flex items-center justify-between px-6 py-4 bg-background-light dark:bg-background-dark border-b-3 border-black">
+<div class="flex items-center gap-2">
+<div class="bg-primary p-1 neo-border">
+<span class="material-symbols-outlined text-black font-bold">payments</span>
+</div>
+<h1 class="text-2xl font-800 tracking-tighter uppercase italic">SplitSquad</h1>
+</div>
+<button class="bg-white neo-border neo-shadow px-4 py-1 font-bold text-sm uppercase">
+            Login
+        </button>
+</nav>
+<!-- Hero Section -->
+<header class="px-6 py-12 flex flex-col gap-8 bg-background-light dark:bg-background-dark">
+<div class="relative">
+<div class="absolute -top-4 -left-2 w-24 h-24 bg-hot-pink/20 rounded-full blur-2xl"></div>
+<h2 class="text-5xl font-800 leading-[0.9] tracking-tighter uppercase relative z-10">
+                Split the <span class="bg-hot-pink text-white px-2">bill</span>, <br/>
+                skip the <span class="bg-primary text-black px-2">awkward</span>
+</h2>
+</div>
+<p class="text-lg font-medium leading-tight max-w-[90%] border-l-3 border-black pl-4">
+            The neo-brutalist way to manage shared expenses without the group chat drama.
+        </p>
+<div class="relative group">
+<button class="w-full bg-neon-yellow neo-border neo-shadow-lg py-5 text-xl font-800 uppercase tracking-widest text-black hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all">
+                Get Started for Free
+            </button>
+</div>
+<div class="neo-border bg-white overflow-hidden neo-shadow-lg mt-4">
+<div class="h-64 bg-slate-200 bg-cover bg-center" data-alt="Friends laughing while splitting a dinner bill at a trendy restaurant" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA5XnlvhC1Z2SJQFvAblviJ4hwvr9RNNpWzA2JO44d0GeYF4zTxrbaf_6XTdw8Jvtn0ZD8eqdIjCF-pQFEjG89f9Wzu3f2Il5b0LiL2fR8VsFsNfAVZf7X-wuf_-7xvGvYMGgTePE9rTHKVbEErZxL9vHDL8l-2CsBpBHuNrqZJdU0_OEMViRDzhRaKClzNqku89_pdXLJoV4I74bjan-n4KdqA_IUZjtkzwL3Ql5yMB9ByL8W-cZkyk08zmTO-sk7mwDuBTAwD15U");'></div>
+</div>
+</header>
+<!-- How It Works Section -->
+<section class="px-6 py-10 bg-background-light dark:bg-background-dark border-t-3 border-black">
+<h3 class="text-3xl font-800 uppercase italic mb-8 underline decoration-primary decoration-4 underline-offset-4">How it works</h3>
+<div class="flex flex-col gap-8">
+<!-- Step 1 -->
+<div class="bg-hot-pink neo-border neo-shadow p-6 flex flex-col gap-4 transform -rotate-1">
+<div class="flex justify-between items-start">
+<span class="bg-black text-white px-3 py-1 font-800 text-xs uppercase">Step 01</span>
+<span class="material-symbols-outlined text-4xl text-black">group_add</span>
+</div>
+<h4 class="text-2xl font-800 uppercase text-white">Create Squad</h4>
+<p class="font-bold text-black/80">Start a group for your trip, house, or dinner in seconds. No complex setups.</p>
+</div>
+<!-- Step 2 -->
+<div class="bg-electric-blue neo-border neo-shadow p-6 flex flex-col gap-4 transform rotate-1">
+<div class="flex justify-between items-start">
+<span class="bg-black text-white px-3 py-1 font-800 text-xs uppercase">Step 02</span>
+<span class="material-symbols-outlined text-4xl text-white">share</span>
+</div>
+<h4 class="text-2xl font-800 uppercase text-white">Add Friends</h4>
+<p class="font-bold text-white/90">Invite your crew with a simple magic link or a quick-scan QR code.</p>
+</div>
+<!-- Step 3 -->
+<div class="bg-primary neo-border neo-shadow p-6 flex flex-col gap-4 transform -rotate-1">
+<div class="flex justify-between items-start">
+<span class="bg-black text-white px-3 py-1 font-800 text-xs uppercase">Step 03</span>
+<span class="material-symbols-outlined text-4xl text-black">receipt_long</span>
+</div>
+<h4 class="text-2xl font-800 uppercase text-black">Split Expenses</h4>
+<p class="font-bold text-black/80">Log costs and let the engine handle the math. Zero friction, total clarity.</p>
+</div>
+</div>
+</section>
+<!-- Visual Debt Engine Feature -->
+<section class="px-6 py-12 bg-black text-white">
+<div class="neo-border border-white p-6 bg-slate-900 relative overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary/20 rounded-full blur-3xl"></div>
+<h3 class="text-3xl font-800 uppercase mb-4 text-primary leading-none">Visual Debt <br/>Engine</h3>
+<p class="text-sm font-medium mb-6 text-slate-300">Forget spreadsheets. See who owes who with our edgy, real-time dynamic graph interface.</p>
+<div class="neo-border border-white bg-black h-48 relative flex items-center justify-center">
+<!-- Abstract visual representation -->
+<div class="w-full h-full opacity-50 bg-[linear-gradient(45deg,#25f478_25%,transparent_25%,transparent_50%,#25f478_50%,#25f478_75%,transparent_75%,transparent)] bg-[length:20px_20px]"></div>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="bg-white text-black neo-border px-4 py-2 font-800 text-lg uppercase neo-shadow">
+                        Live Tracking
+                     </div>
+</div>
+</div>
+</div>
+</section>
+<!-- Social Proof / Footer -->
+<footer class="px-6 py-12 bg-background-light dark:bg-background-dark border-t-3 border-black">
+<div class="flex flex-col gap-8">
+<div class="flex flex-wrap gap-2">
+<span class="bg-neon-yellow neo-border px-3 py-1 font-800 text-xs uppercase text-black">#GenZApproved</span>
+<span class="bg-hot-pink neo-border px-3 py-1 font-800 text-xs uppercase text-white">#NoMoreDrama</span>
+<span class="bg-electric-blue neo-border px-3 py-1 font-800 text-xs uppercase text-white">#SplitTheBill</span>
+</div>
+<div class="flex justify-between items-end">
+<div class="flex flex-col gap-2">
+<h5 class="font-800 uppercase italic text-xl">SplitSquad</h5>
+<p class="text-xs font-bold uppercase opacity-60">© 2024 SplitSquad Inc.</p>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-black dark:text-white">language</span>
+<span class="material-symbols-outlined text-black dark:text-white">settings</span>
+</div>
+</div>
+</div>
+</footer>
+<!-- Bottom Bar Navigation (Mobile) -->
+<div class="fixed bottom-0 left-0 right-0 bg-white border-t-3 border-black px-8 py-4 flex justify-between items-center z-50">
+<button class="flex flex-col items-center gap-1">
+<span class="material-symbols-outlined text-black font-bold">home</span>
+</button>
+<button class="bg-primary neo-border p-3 -mt-10 neo-shadow">
+<span class="material-symbols-outlined text-black font-bold text-3xl">add</span>
+</button>
+<button class="flex flex-col items-center gap-1">
+<span class="material-symbols-outlined text-black font-bold">account_circle</span>
+</button>
+</div>
+<div class="h-16"></div> <!-- Spacer for fixed bottom bar -->
+</body></html>

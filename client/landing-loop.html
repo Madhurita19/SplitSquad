@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0d59f2",
+                        "neon-yellow": "#e2ff00",
+                        "hot-pink": "#ff00e5",
+                        "toxic-green": "#00ff66",
+                        "electric-blue": "#00f0ff",
+                        "background-light": "#f5f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk"],
+                        "mono": ["Space Mono", "monospace"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "0px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .neo-shadow {
+            box-shadow: 4px 4px 0px 0px #000000;
+        }
+        .neo-shadow-lg {
+            box-shadow: 8px 8px 0px 0px #000000;
+        }
+        .neo-border {
+            border: 4px solid #000000;
+        }
+        .bubble-pink {
+            background-color: #ff00e5;
+            clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+        }
+        .bubble-green {
+            background-color: #00ff66;
+            clip-path: polygon(0% 15%, 25% 15%, 25% 0%, 50% 15%, 100% 15%, 100% 100%, 0% 100%);
+        }
+        .bubble-blue {
+            background-color: #00f0ff;
+            clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 30% 100%, 0% 100%, 15% 75%, 0% 75%);
+        }
+        .arrow-curved {
+            stroke-dasharray: 1000;
+            stroke-dashoffset: 0;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-neon-yellow font-mono text-black overflow-x-hidden">
+<!-- Header Component -->
+<div class="flex items-center bg-white border-b-4 border-black p-4 justify-between sticky top-0 z-50">
+<div class="text-black flex size-10 shrink-0 items-center border-2 border-black neo-shadow bg-white" data-icon="ArrowLeft">
+<span class="material-symbols-outlined w-full text-center font-bold">arrow_back</span>
+</div>
+<h2 class="text-black text-xl font-bold leading-tight uppercase tracking-tighter flex-1 text-center font-display italic">SplitSquad</h2>
+<div class="flex w-10 items-center justify-end">
+<button class="flex size-10 items-center justify-center border-2 border-black neo-shadow bg-white">
+<span class="material-symbols-outlined font-bold">menu</span>
+</button>
+</div>
+</div>
+<!-- Main Content -->
+<main class="min-h-screen p-6 flex flex-col items-center justify-start gap-12 pt-16">
+<div class="text-center">
+<h1 class="text-4xl font-bold uppercase tracking-tighter bg-black text-white p-2 inline-block neo-shadow-lg mb-4">The Debt Loop</h1>
+<p class="text-lg font-bold uppercase tracking-wide border-2 border-black bg-white px-3 py-1 neo-shadow">Stuck in the cycle?</p>
+</div>
+<!-- Debt Loop Visual Section -->
+<div class="relative w-full aspect-square max-w-[400px] flex items-center justify-center">
+<!-- Central SVG Arrows -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none" viewbox="0 0 400 400">
+<defs>
+<marker id="arrowhead" markerheight="7" markerwidth="10" orient="auto" refx="9" refy="3.5">
+<polygon fill="black" points="0 0, 10 3.5, 0 7"></polygon>
+</marker>
+</defs>
+<!-- Arrow A to B -->
+<path d="M 220,110 Q 280,120 290,190" fill="none" marker-end="url(#arrowhead)" stroke="black" stroke-width="4"></path>
+<!-- Arrow B to C -->
+<path d="M 270,300 Q 200,340 130,300" fill="none" marker-end="url(#arrowhead)" stroke="black" stroke-width="4"></path>
+<!-- Arrow C to A -->
+<path d="M 110,190 Q 120,120 180,110" fill="none" marker-end="url(#arrowhead)" stroke="black" stroke-width="4"></path>
+</svg>
+<!-- Person A (Top) -->
+<div class="absolute top-0 flex flex-col items-center">
+<!-- Thought Bubble A -->
+<div class="relative mb-2">
+<div class="absolute inset-0 bg-black translate-x-1 translate-y-1"></div>
+<div class="bg-hot-pink border-2 border-black p-3 relative">
+<p class="font-bold text-xs uppercase">Waiting on C...</p>
+</div>
+</div>
+<!-- Character Avatar A -->
+<div class="size-20 bg-white border-4 border-black neo-shadow-lg flex items-center justify-center">
+<img alt="Character A" class="w-full h-full" data-alt="Avatar of character A with anxious expression" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPX6gqIPoNqEcPnkbeLE7e-Zkqx6tXO_owIpOE9oEBIJ2xuGqKTsZtySZUAqfm1VNFoCKH4-NCMTceO4fz7p54a-3IPQeUsF57YXaA5HkmvE7upZGPOy2Z8v51MUzrGM6NNZ2lhuZm9OoKqVZfYVflu8zMB5Es8M2KDR-_2VrDC3-b-bKYf6cJtqh_ZHcMqolF6SHJ9Vb0TJnZodQTGfMu-SP5BEF3CXe2x1yCprNEi9zLA5sRFubyJzJdBxZcv5ZG3MB4fJBHShE"/>
+</div>
+<div class="bg-black text-white font-bold px-2 py-0.5 mt-2">USER A</div>
+</div>
+<!-- Person B (Bottom Right) -->
+<div class="absolute bottom-10 right-0 flex flex-col items-center">
+<!-- Thought Bubble B -->
+<div class="relative mb-2">
+<div class="absolute inset-0 bg-black translate-x-1 translate-y-1"></div>
+<div class="bg-toxic-green border-2 border-black p-3 relative">
+<p class="font-bold text-xs uppercase">Waiting on A...</p>
+</div>
+</div>
+<!-- Character Avatar B -->
+<div class="size-20 bg-white border-4 border-black neo-shadow-lg flex items-center justify-center">
+<img alt="Character B" class="w-full h-full" data-alt="Avatar of character B with frustrated expression" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8rRJedVyNE27FuGGKjjYgxceenVvsBAM9By5edPqEoO1oDWEj3bBAhmgRG0zW4mXAQmszfqLBT8tth29JLhMPP6pzT3FF_L3BiPkU-RNYZ5u3T1tT9Mea5iIDB3apOjSJ_xASkTpkr3rBj4j-MGhftFuVGHZuF6GmaF3LTIJ8H70zXItkBon56rdkOa9XWDu0Fke1Afd3uRlWxq6X-vJegcKTWN_BMCeAhpg1haQ1CXDpiCW1kFsuPUuE1vYnq_WMMMyg-qllz0s"/>
+</div>
+<div class="bg-black text-white font-bold px-2 py-0.5 mt-2">USER B</div>
+</div>
+<!-- Person C (Bottom Left) -->
+<div class="absolute bottom-10 left-0 flex flex-col items-center">
+<!-- Thought Bubble C -->
+<div class="relative mb-2">
+<div class="absolute inset-0 bg-black translate-x-1 translate-y-1"></div>
+<div class="bg-electric-blue border-2 border-black p-3 relative">
+<p class="font-bold text-xs uppercase">Waiting on B...</p>
+</div>
+</div>
+<!-- Character Avatar C -->
+<div class="size-20 bg-white border-4 border-black neo-shadow-lg flex items-center justify-center">
+<img alt="Character C" class="w-full h-full" data-alt="Avatar of character C with angry expression" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjEJOEQVWv8OobwsOanSS-FddbCY3DWs2-3zqy6_Zuq2W3jeGyAYoa_00i3JM3zuKLy5Fz-ZrU4paF46dpzBxpqMzFZAG1q0nHlUGNqLn50_2UVPlVPbQb7uVJZjM_HYoZrxqPyF3LvzClR8P3Dn3jx6pkYf9abOq58FZN4COTdaeI0-QP4n1G34wjiLaUtauI8i93agiIdrEvm2Qnee88bOgbYjrMA1C8868C4Ty0RRjn_xhVnSB-YBUZw1hyrbyX-S2puGxe3Rc"/>
+</div>
+<div class="bg-black text-white font-bold px-2 py-0.5 mt-2">USER C</div>
+</div>
+</div>
+<!-- Loop Formula -->
+<div class="w-full max-w-sm mt-8">
+<div class="bg-black text-white p-6 neo-shadow-lg text-center">
+<h3 class="text-3xl font-bold tracking-tighter italic">A → B → C → A</h3>
+<div class="h-1 bg-white my-4"></div>
+<p class="text-sm font-bold uppercase leading-tight">Nobody gets paid until someone breaks the chain.</p>
+</div>
+</div>
+<!-- CTA Section -->
+<div class="w-full max-w-sm pb-24">
+<button class="w-full bg-primary text-white border-4 border-black p-5 text-xl font-bold uppercase neo-shadow-lg active:translate-x-1 active:translate-y-1 active:shadow-none">
+                Break the loop now!
+            </button>
+</div>
+</main>
+<!-- Bottom Navigation Component -->
+<div class="fixed bottom-0 left-0 right-0 bg-white border-t-4 border-black px-4 pb-6 pt-3 flex gap-4 z-50">
+<a class="flex flex-1 flex-col items-center justify-center gap-1 bg-neon-yellow border-2 border-black neo-shadow py-2" href="#">
+<span class="material-symbols-outlined font-bold text-black">sync</span>
+<p class="text-black text-[10px] font-bold uppercase">Loop</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 border-2 border-black py-2" href="#">
+<span class="material-symbols-outlined text-slate-500">receipt_long</span>
+<p class="text-slate-500 text-[10px] font-bold uppercase">Debts</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 border-2 border-black py-2" href="#">
+<span class="material-symbols-outlined text-slate-500">group</span>
+<p class="text-slate-500 text-[10px] font-bold uppercase">Groups</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 border-2 border-black py-2" href="#">
+<span class="material-symbols-outlined text-slate-500">account_circle</span>
+<p class="text-slate-500 text-[10px] font-bold uppercase">Profile</p>
+</a>
+</div>
+</body></html>
