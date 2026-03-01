@@ -14,7 +14,6 @@
 
 ## 📸 Visuals
 
-*(Add your screenshots or a GIF here showcasing the app's UI, such as the Dashboard, Group Detail, and Visual Debt Engine.)*
 
 <p align="center">
   <img src="./client/public/landing.png" alt="SplitSquad Demo" width="100%" style="border: 4px solid black; border-radius: 8px;"/>
@@ -151,7 +150,7 @@ Created by **Madhurita Mukherjee**.
 Reach out if you have any questions or just want to connect!
 
 - **GitHub**: [@Madhurita19](https://github.com/Madhurita19)
-- *(Add any extra social links like LinkedIn or Email here)*
+- **LinkedIn**: [Madhurita Mukherjee](https://www.linkedin.com/in/madhurita-mukherjee/)
 
 ---
 *#GenZApproved #NoMoreDrama #SplitTheBill*
