@@ -3,7 +3,7 @@ import api from '../../utils/api';
 import { formatCurrency } from '../../utils/currency';
 import toast from 'react-hot-toast';
 
-const AnalyticsTab = ({ groupId }) => {
+const AnalyticsTab = ({ groupId, group }) => {
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(true);
 
