@@ -14,6 +14,7 @@ const Dashboard = () => {
     const [showModal, setShowModal] = useState(false);
     const [showProfileModal, setShowProfileModal] = useState(false);
     const [showStats, setShowStats] = useState(false);
+    const [showHelp, setShowHelp] = useState(false); // New help state
     const [newGroup, setNewGroup] = useState({ name: '', description: '', category: 'other', baseCurrency: 'INR' });
     const [profileData, setProfileData] = useState({ name: user?.name || '', email: user?.email || '', upiId: user?.upiId || '', password: '' });
     const [stats, setStats] = useState({ totalExpenses: 0, totalAmountSpent: 0, avgPerExpense: 0, topSquad: null });
@@ -23,11 +24,11 @@ const Dashboard = () => {
 
     // Calculate total net balance across all groups
     const totalBalance = groups.reduce((acc, curr) => {
-        if (curr.isArchived && !showArchived) return acc; // Optional: maybe only count active balances? Actually let's count all balances.
+        if (curr.isArchived && !showArchived) return acc;
         return acc + curr.myBalance;
     }, 0);
 
-    // Compute level from activity: 1 point per group, 1 point per 5 expenses, 1 point per ₹1000 spent
+    // Compute level
     const level = Math.max(1, Math.floor(
         groups.length +
         (stats.totalExpenses / 5) +
@@ -113,6 +114,18 @@ const Dashboard = () => {
         <div className="font-body text-white min-h-screen p-4 pb-32">
             <div className="max-w-md mx-auto space-y-6">
 
+                {/* UPI Missing Warning */}
+                {!user?.upiId && (
+                    <div className="bg-hot-pink brutalist-border shadow-neo-4 p-4 flex items-center gap-4 animate-bounce">
+                        <span className="material-symbols-outlined text-white text-3xl font-black">warning</span>
+                        <div className="flex-1">
+                            <p className="font-display text-sm text-white uppercase leading-tight">UPI ID MISSING</p>
+                            <p className="font-mono text-[10px] text-white/80 uppercase">You can't receive payments via QR code until you set this!</p>
+                        </div>
+                        <button onClick={() => setShowProfileModal(true)} className="bg-white text-black px-3 py-1 font-display text-xs uppercase brutalist-border shadow-neo-sm">FIX</button>
+                    </div>
+                )}
+
                 {/* Header */}
                 <header className="bg-neon-yellow brutalist-border shadow-neo-4 p-3 sm:p-4 flex items-center justify-between mt-2 gap-2">
                     <div className="flex items-center gap-3 min-w-0 flex-1">
@@ -120,7 +133,7 @@ const Dashboard = () => {
                             {user?.name?.charAt(0)}
                         </div>
                         <div className="flex flex-col min-w-0 mr-2">
-                            <h2 className="font-display text-xl sm:text-2xl text-black uppercase leading-tight whitespace-normal break-words max-w-[140px] sm:max-w-[220px]">
+                            <h2 className="font-display text-xl sm:text-2xl text-black uppercase leading-tight whitespace-normal break-words">
                                 YO {user?.name?.split(' ')[0]}!
                             </h2>
                             <div className="mt-1.5 flex items-center">
@@ -132,6 +145,9 @@ const Dashboard = () => {
                     </div>
                     <div className="flex items-center gap-2">
                         <NotificationsDropdown />
+                        <button onClick={() => setShowHelp(true)} className="size-10 brutalist-border bg-electric-blue flex items-center justify-center text-white active:translate-y-1 active:shadow-none transition-all" title="How to use">
+                            <span className="material-symbols-outlined font-bold text-[22px]">help</span>
+                        </button>
                         <button onClick={() => setShowProfileModal(true)} className="size-10 brutalist-border bg-white flex items-center justify-center text-black active:translate-y-1 active:shadow-none transition-all" title="Edit Profile">
                             <span className="material-symbols-outlined font-bold text-[22px]">settings</span>
                         </button>
@@ -468,6 +484,55 @@ const Dashboard = () => {
                                     {updatingProfile ? 'SAVING...' : 'SAVE CHANGES'}
                                 </button>
                             </form>
+                        </div>
+                    </div>
+                )}
+
+                {/* Quick Help Modal */}
+                {showHelp && (
+                    <div className="fixed inset-0 bg-black/80 z-[60] flex items-center justify-center p-4">
+                        <div className="bg-white brutalist-border shadow-neo-8 p-6 w-full max-w-sm space-y-6">
+                            <div className="flex justify-between items-center border-b-4 border-black pb-2">
+                                <h2 className="font-display text-2xl text-black uppercase">HOW TO USE</h2>
+                                <button onClick={() => setShowHelp(false)}>
+                                    <span className="material-symbols-outlined font-bold text-black">close</span>
+                                </button>
+                            </div>
+
+                            <div className="space-y-4">
+                                <div className="flex gap-4">
+                                    <div className="bg-neon-yellow brutalist-border size-8 flex items-center justify-center shrink-0 font-display font-black text-black">1</div>
+                                    <div>
+                                        <p className="font-display text-sm text-black uppercase">Create a Squad</p>
+                                        <p className="font-mono text-[10px] text-black/60 uppercase">Tap the + button to start a group for your trip or dinner.</p>
+                                    </div>
+                                </div>
+                                <div className="flex gap-4">
+                                    <div className="bg-electric-blue brutalist-border size-8 flex items-center justify-center shrink-0 font-display font-black text-white">2</div>
+                                    <div>
+                                        <p className="font-display text-sm text-black uppercase">Invite Friends</p>
+                                        <p className="font-mono text-[10px] text-black/60 uppercase">Share your Squad Link. They'll appear in your list instantly.</p>
+                                    </div>
+                                </div>
+                                <div className="flex gap-4">
+                                    <div className="bg-hot-pink brutalist-border size-8 flex items-center justify-center shrink-0 font-display font-black text-white">3</div>
+                                    <div>
+                                        <p className="font-display text-sm text-black uppercase">Add Expenses</p>
+                                        <p className="font-mono text-[10px] text-black/60 uppercase">Log what you spent. We'll handle the math and show who owes who.</p>
+                                    </div>
+                                </div>
+                                <div className="flex gap-4">
+                                    <div className="bg-toxic-green brutalist-border size-8 flex items-center justify-center shrink-0 font-display font-black text-black">4</div>
+                                    <div>
+                                        <p className="font-display text-sm text-black uppercase">Settle with QR</p>
+                                        <p className="font-mono text-[10px] text-black/60 uppercase">Tap "Settle" inside a squad to pay back via any UPI app instantly.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button onClick={() => setShowHelp(false)} className="w-full bg-black text-white brutalist-border py-4 font-display text-xl uppercase shadow-neo-bottom active:translate-y-1 active:shadow-none transition-all">
+                                GOT IT!
+                            </button>
                         </div>
                     </div>
                 )}
