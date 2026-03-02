@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-    baseURL: '/api', // Proxied in Dev, works natively in Prod
+    baseURL: import.meta.env.VITE_API_URL || '/api',
 });
 
 // Add a request interceptor to attach JWT
