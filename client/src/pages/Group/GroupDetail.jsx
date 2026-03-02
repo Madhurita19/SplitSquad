@@ -301,7 +301,7 @@ const GroupDetail = () => {
                 )}
 
                 {activeTab === 'analytics' && (
-                    <AnalyticsTab groupId={id} />
+                    <AnalyticsTab groupId={id} group={group} />
                 )}
             </div>
 
