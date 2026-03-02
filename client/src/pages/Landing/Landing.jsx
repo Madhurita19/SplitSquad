@@ -35,20 +35,19 @@ const Landing = () => {
                     <div className="relative">
                         <div className="absolute -top-4 -left-2 w-24 h-24 bg-electric-blue/20 rounded-full blur-2xl"></div>
                         <h2 className="font-display text-6xl md:text-8xl font-black leading-[0.9] tracking-tighter uppercase relative z-10 text-black pt-4">
-                            Cut through <br className="hidden md:block" />
-                            the <span className="bg-neon-yellow text-black px-2 mt-2 inline-block">chaos</span>, <br />
-                            skip the <br />
+                            Split bills. <br className="hidden md:block" />
+                            Skip the <br />
                             <span className="bg-toxic-green text-black px-2 mt-2 inline-block transition-all duration-300">
                                 {words[wordIndex]}
                             </span>
                         </h2>
                     </div>
                     <p className="font-mono text-xl font-bold leading-tight max-w-[90%] md:max-w-[70%] border-l-4 border-black pl-4 text-black/80">
-                        Stop the endless UPI requests. Our engine simplifies complex group debts into one single move so everyone gets paid instantly.
+                        Stop the "who owes who" headache. SplitSquad simplifies complex debts into one single move so you get paid back instantly via UPI.
                     </p>
                     <div className="relative group mt-4 md:w-2/3">
                         <Link to="/register" className="block text-center w-full bg-neon-yellow brutalist-border shadow-neo-8 py-5 font-display text-xl font-black uppercase tracking-widest text-black hover:translate-x-2 hover:translate-y-2 hover:shadow-none transition-all">
-                            Initialize Squad
+                            Start Splitting Now
                         </Link>
                     </div>
                 </div>
@@ -123,9 +122,66 @@ const Landing = () => {
                 </div>
             </header>
 
+            {/* Traditional vs SplitSquad Section */}
+            <section className="px-6 py-20 bg-white border-b-4 border-black">
+                <div className="max-w-5xl mx-auto">
+                    <h3 className="font-display text-4xl md:text-6xl font-black uppercase text-center mb-16 tracking-tighter">
+                        Why choose <span className="text-electric-blue italic">SplitSquad?</span>
+                    </h3>
+
+                    <div className="grid md:grid-cols-2 gap-0 border-4 border-black shadow-neo-8 overflow-hidden">
+                        {/* Traditional */}
+                        <div className="p-8 border-b-4 md:border-b-0 md:border-r-4 border-black bg-gray-50">
+                            <h4 className="font-display text-2xl font-black uppercase mb-6 text-gray-500 line-through">Traditional Splitting</h4>
+                            <ul className="space-y-4 font-mono font-bold text-sm">
+                                <li className="flex items-center gap-3">
+                                    <span className="material-symbols-outlined text-red-500">close</span>
+                                    MANUAL CALCULATIONS IN NOTES
+                                </li>
+                                <li className="flex items-center gap-3">
+                                    <span className="material-symbols-outlined text-red-500">close</span>
+                                    AWKWARD "WHO OWES WHO" TEXTS
+                                </li>
+                                <li className="flex items-center gap-3">
+                                    <span className="material-symbols-outlined text-red-500">close</span>
+                                    10 SEPARATE BANK TRANSFERS
+                                </li>
+                                <li className="flex items-center gap-3">
+                                    <span className="material-symbols-outlined text-red-500">close</span>
+                                    HUNTING FOR UPI IDS & HANDLES
+                                </li>
+                            </ul>
+                        </div>
+
+                        {/* SplitSquad */}
+                        <div className="p-8 bg-neon-yellow">
+                            <h4 className="font-display text-2xl font-black uppercase mb-6 text-black">The SplitSquad Way</h4>
+                            <ul className="space-y-4 font-mono font-bold text-sm">
+                                <li className="flex items-center gap-3">
+                                    <span className="material-symbols-outlined text-toxic-green bg-black rounded-full">check</span>
+                                    AUTO-OPTIMIZED SETTLEMENTS
+                                </li>
+                                <li className="flex items-center gap-3">
+                                    <span className="material-symbols-outlined text-toxic-green bg-black rounded-full">check</span>
+                                    REAL-TIME GROUP NOTIFICATIONS
+                                </li>
+                                <li className="flex items-center gap-3">
+                                    <span className="material-symbols-outlined text-toxic-green bg-black rounded-full">check</span>
+                                    ONE-CLICK UPI QR SCAN
+                                </li>
+                                <li className="flex items-center gap-3">
+                                    <span className="material-symbols-outlined text-toxic-green bg-black rounded-full">check</span>
+                                    ZERO MATH. ZERO DRAMA.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             {/* How It Works Section */}
             <section className="px-6 py-16 bg-background-light border-b-4 border-black">
-                <h3 className="font-display text-4xl font-black uppercase italic mb-8 underline decoration-toxic-green decoration-4 underline-offset-8">How it works</h3>
+                <h3 className="font-display text-4xl font-black uppercase italic mb-8 underline decoration-toxic-green decoration-4 underline-offset-8 text-center">Your 3-Step Success Plan</h3>
                 <div className="flex flex-col md:flex-row gap-8">
                     {/* Step 1 */}
                     <div className="flex-1 bg-hot-pink brutalist-border shadow-neo-4 p-6 flex flex-col gap-4 transform -rotate-1 hover:rotate-0 transition-transform">
@@ -134,7 +190,7 @@ const Landing = () => {
                             <span className="material-symbols-outlined text-5xl text-black">group_add</span>
                         </div>
                         <h4 className="font-display text-3xl font-black uppercase text-white mt-4">Create Squad</h4>
-                        <p className="font-mono text-lg font-bold text-black/90">Start a group for your trip, house, or dinner in seconds. No complex setups.</p>
+                        <p className="font-mono text-lg font-bold text-black/90">Start a group for your trip, house, or dinner. It's ready in 10 seconds.</p>
                     </div>
 
                     {/* Step 2 */}
@@ -143,8 +199,8 @@ const Landing = () => {
                             <span className="bg-black text-white font-mono px-3 py-1 font-bold text-xs uppercase brutalist-border border-white">Step 02</span>
                             <span className="material-symbols-outlined text-5xl text-white">share</span>
                         </div>
-                        <h4 className="font-display text-3xl font-black uppercase text-white mt-4">Add Friends</h4>
-                        <p className="font-mono text-lg font-bold text-white/90">Invite your crew instantly by searching their username or email.</p>
+                        <h4 className="font-display text-3xl font-black uppercase text-white mt-4">Add the Crew</h4>
+                        <p className="font-mono text-lg font-bold text-white/90">Send your squad an invite link. They join with one click. No long forms.</p>
                     </div>
 
                     {/* Step 3 */}
@@ -153,8 +209,8 @@ const Landing = () => {
                             <span className="bg-black text-white font-mono px-3 py-1 font-bold text-xs uppercase brutalist-border border-white">Step 03</span>
                             <span className="material-symbols-outlined text-5xl text-black">settings_suggest</span>
                         </div>
-                        <h4 className="font-display text-3xl font-black uppercase text-black mt-4">Auto-Simplify</h4>
-                        <p className="font-mono text-lg font-bold text-black/80">The math engine cuts transfers. A owes B, C owes A? C just pays B.</p>
+                        <h4 className="font-display text-3xl font-black uppercase text-black mt-4">Settle Up</h4>
+                        <p className="font-mono text-lg font-bold text-black/80">Log expenses and scan the QR to pay. Let our engine handle the math.</p>
                     </div>
                 </div>
             </section>
@@ -162,13 +218,13 @@ const Landing = () => {
             {/* Visual Debt Engine Feature */}
             <section className="px-6 py-16 bg-background-light border-b-4 border-black bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]">
                 <div className="flex items-center gap-2 mb-8">
-                    <span className="bg-black text-white px-3 py-1 font-display font-black text-sm uppercase">Feature</span>
-                    <h3 className="font-display text-3xl md:text-5xl font-black uppercase italic">Visual Debt Engine</h3>
+                    <span className="bg-black text-white px-3 py-1 font-display font-black text-sm uppercase">The Tech</span>
+                    <h3 className="font-display text-3xl md:text-5xl font-black uppercase italic">"The Magic Settle-Up"</h3>
                 </div>
 
                 <div className="brutalist-border border-black p-6 md:p-12 bg-white shadow-neo-8 relative md:w-3/4 mx-auto">
                     <div className="mb-12">
-                        <h4 className="font-mono text-sm font-bold uppercase mb-8 opacity-60 text-center">The Messy Reality:</h4>
+                        <h4 className="font-mono text-sm font-bold uppercase mb-8 opacity-60 text-center">Why Everyone is Confused:</h4>
 
                         <div className="relative h-64 md:h-80 flex items-center justify-center max-w-lg mx-auto">
                             {/* Avatars */}
@@ -202,24 +258,24 @@ const Landing = () => {
                     <div className="my-12 flex flex-col items-center relative z-20">
                         <div className="bg-black text-white px-6 py-3 font-display font-black uppercase tracking-widest flex items-center gap-3 animate-pulse shadow-neo-4">
                             <span className="material-symbols-outlined">settings_suggest</span>
-                            The engine minimizes transfers
+                            Our engine merging debts
                         </div>
                         <div className="h-12 border-l-4 border-black border-dashed"></div>
                     </div>
 
                     <div className="bg-toxic-green brutalist-border border-black p-8 flex flex-col items-center text-center shadow-neo-4 relative z-20">
-                        <h4 className="font-mono text-sm font-bold uppercase mb-4 opacity-80">Simplified Output:</h4>
+                        <h4 className="font-mono text-sm font-bold uppercase mb-4 opacity-80">The Result:</h4>
                         <div className="font-display text-4xl md:text-6xl font-black uppercase tracking-tighter mb-4 text-black">C pays B 500</div>
-                        <p className="font-mono text-sm md:text-base font-bold uppercase border-t-2 border-black pt-2">One simple transaction. Total Peace.</p>
+                        <p className="font-mono text-sm md:text-base font-bold uppercase border-t-2 border-black pt-2">One simple QR scan settles the whole group.</p>
                     </div>
                 </div>
             </section>
 
             {/* Bottom Final CTA */}
             <section className="px-6 py-20 bg-electric-blue border-b-4 border-black text-center flex flex-col items-center gap-8">
-                <h2 className="font-display text-5xl md:text-7xl font-black uppercase text-white tracking-tighter transform -rotate-2">Ready to ditch<br />the spreadsheets?</h2>
+                <h2 className="font-display text-5xl md:text-7xl font-black uppercase text-white tracking-tighter transform -rotate-2">Stop the awkward.<br />Start the splitting.</h2>
                 <Link to="/register" className="inline-block bg-neon-yellow brutalist-border shadow-neo-8 py-5 px-12 font-display text-2xl font-black uppercase tracking-widest text-black hover:translate-x-2 hover:translate-y-2 hover:shadow-none transition-all transform rotate-1">
-                    Initialize Your First Squad
+                    Create Your First Squad
                 </Link>
             </section>
 
@@ -248,3 +304,4 @@ const Landing = () => {
 };
 
 export default Landing;
+
