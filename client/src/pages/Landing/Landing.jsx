@@ -35,19 +35,19 @@ const Landing = () => {
                     <div className="relative">
                         <div className="absolute -top-4 -left-2 w-24 h-24 bg-electric-blue/20 rounded-full blur-2xl"></div>
                         <h2 className="font-display text-6xl md:text-8xl font-black leading-[0.9] tracking-tighter uppercase relative z-10 text-black pt-4">
-                            Split bills. <br className="hidden md:block" />
-                            Skip the <br />
+                            Who owes who? <br className="hidden md:block" />
+                            Solved. <br />
                             <span className="bg-toxic-green text-black px-2 mt-2 inline-block transition-all duration-300">
-                                {words[wordIndex]}
+                                Skip the {words[wordIndex]}
                             </span>
                         </h2>
                     </div>
                     <p className="font-mono text-xl font-bold leading-tight max-w-[90%] md:max-w-[70%] border-l-4 border-black pl-4 text-black/80">
-                        Stop the "who owes who" headache. SplitSquad simplifies complex debts into one single move so you get paid back instantly via UPI.
+                        Split dinner? Weekend trip? Shared rent? Stop tracking debts on notes apps. SplitSquad automatically figures out the smartest way to settle up — turning 10 messy payments into just 1 or 2.
                     </p>
                     <div className="relative group mt-4 md:w-2/3">
                         <Link to="/register" className="block text-center w-full bg-neon-yellow brutalist-border shadow-neo-8 py-5 font-display text-xl font-black uppercase tracking-widest text-black hover:translate-x-2 hover:translate-y-2 hover:shadow-none transition-all">
-                            Start Splitting Now
+                            Try It Free
                         </Link>
                     </div>
                 </div>
@@ -273,7 +273,7 @@ const Landing = () => {
 
             {/* Bottom Final CTA */}
             <section className="px-6 py-20 bg-electric-blue border-b-4 border-black text-center flex flex-col items-center gap-8">
-                <h2 className="font-display text-5xl md:text-7xl font-black uppercase text-white tracking-tighter transform -rotate-2">Stop the awkward.<br />Start the splitting.</h2>
+                <h2 className="font-display text-5xl md:text-7xl font-black uppercase text-white tracking-tighter transform -rotate-2">Stop chasing payments.<br />Less transfers. Zero drama.</h2>
                 <Link to="/register" className="inline-block bg-neon-yellow brutalist-border shadow-neo-8 py-5 px-12 font-display text-2xl font-black uppercase tracking-widest text-black hover:translate-x-2 hover:translate-y-2 hover:shadow-none transition-all transform rotate-1">
                     Create Your First Squad
                 </Link>
@@ -285,7 +285,7 @@ const Landing = () => {
                     <div className="flex flex-wrap gap-3">
                         <span className="bg-neon-yellow brutalist-border px-4 py-2 font-mono font-bold text-xs uppercase text-black">#GenZApproved</span>
                         <span className="bg-hot-pink brutalist-border px-4 py-2 font-mono font-bold text-xs uppercase text-white">#NoMoreDrama</span>
-                        <span className="bg-electric-blue brutalist-border px-4 py-2 font-mono font-bold text-xs uppercase text-white">#SplitTheBill</span>
+                        <span className="bg-electric-blue brutalist-border px-4 py-2 font-mono font-bold text-xs uppercase text-white">#FewerTransfers</span>
                     </div>
                     <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-4">
                         <div className="flex flex-col gap-2">
@@ -304,4 +304,3 @@ const Landing = () => {
 };
 
 export default Landing;
-
